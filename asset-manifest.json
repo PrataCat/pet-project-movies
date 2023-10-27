@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/pet-project-movies/static/css/main.11404f51.css",
+    "main.js": "/pet-project-movies/static/js/main.6884186f.js",
+    "static/js/787.27bdf163.chunk.js": "/pet-project-movies/static/js/787.27bdf163.chunk.js",
+    "static/media/logo.svg": "/pet-project-movies/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/pet-project-movies/index.html",
+    "main.11404f51.css.map": "/pet-project-movies/static/css/main.11404f51.css.map",
+    "main.6884186f.js.map": "/pet-project-movies/static/js/main.6884186f.js.map",
+    "787.27bdf163.chunk.js.map": "/pet-project-movies/static/js/787.27bdf163.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.11404f51.css",
+    "static/js/main.6884186f.js"
+  ]
+}
