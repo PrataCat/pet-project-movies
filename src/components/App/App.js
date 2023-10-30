@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -9,7 +10,7 @@ const MovieDetails = lazy(() => import('../../pages/MovieDetails'));
 const CastList = lazy(() => import('../CastList'));
 const NotFound = lazy(() => import('../../pages/NotFound'));
 
-function App() {
+const App = () => {
   return (
     <>
       <Routes>
@@ -25,6 +26,6 @@ function App() {
       </Routes>
     </>
   );
-}
+};
 
 export default App;
