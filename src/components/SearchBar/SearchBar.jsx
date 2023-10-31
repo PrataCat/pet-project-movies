@@ -1,7 +1,8 @@
+import './SearchBar.css';
+
 const SearchBar = () => {
   return (
-    <div>
-      {/* <h2>This is SearchBar</h2> */}
+    <div className="searchbar-container">
       <form class="d-flex" role="search">
         <input
           class="form-control me-2"
@@ -9,7 +10,7 @@ const SearchBar = () => {
           placeholder="Search"
           aria-label="Search"
         />
-        <button class="btn btn-outline-success" type="submit">
+        <button class="btn btn-outline-info" type="submit">
           Search
         </button>
       </form>

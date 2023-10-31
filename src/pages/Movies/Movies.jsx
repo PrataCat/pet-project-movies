@@ -1,7 +1,7 @@
 const Movies = () => {
   return (
     <div>
-      <h2>This is Movies page</h2>
+      <h1>This is a Movies page</h1>
     </div>
   );
 };
