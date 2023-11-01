@@ -2,6 +2,7 @@ import { NavLink, Outlet } from 'react-router-dom';
 import { Suspense } from 'react';
 import SearchBar from '../SearchBar';
 import './SharedLayout.css';
+import Loader from '../Loader';
 
 const SharedLayout = () => {
   return (
@@ -29,7 +30,7 @@ const SharedLayout = () => {
           <SearchBar />
         </header>
       </nav>
-      <Suspense fallback={<h2>Loading...</h2>}>
+      <Suspense fallback={<Loader />}>
         <Outlet />
       </Suspense>
     </div>

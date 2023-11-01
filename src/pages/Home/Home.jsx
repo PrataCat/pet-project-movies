@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import getTrendingAll from '../../servises/api/getTrendingAll';
 import MovieList from '../../components/MovieList';
+import Loader from '../../components/Loader';
 
 const Home = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -31,7 +32,7 @@ const Home = () => {
 
   return (
     <main>
-      {isLoading && <h2>Loading...</h2>}
+      {isLoading && <Loader />}
       <h1>Hello guys</h1>
       <MovieList movies={topMovies} pageTitle={'In trend'} />
       {errorMassege && <h2>{errorMassege}</h2>}
