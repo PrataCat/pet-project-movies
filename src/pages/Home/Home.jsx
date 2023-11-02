@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import getTrendingAll from '../../servises/api/getTrendingAll';
 import MovieList from '../../components/MovieList';
 import Loader from '../../components/Loader';
+import PosterCarousel from '../../components/PosterCarousel';
 
 const Home = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -34,6 +35,7 @@ const Home = () => {
     <main>
       {isLoading && <Loader />}
       <h1>Hello guys</h1>
+      <PosterCarousel movies={topMovies} />
       <MovieList movies={topMovies} pageTitle={'In trend'} />
       {errorMassege && <h2>{errorMassege}</h2>}
     </main>
