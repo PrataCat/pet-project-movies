@@ -1,4 +1,5 @@
 import './SearchBar.css';
+import sprite from '../../images/symbol-defs.svg';
 
 const SearchBar = () => {
   return (
@@ -10,8 +11,14 @@ const SearchBar = () => {
           placeholder="Search"
           aria-label="Search"
         />
-        <button className="btn btn-outline-info" type="submit">
-          Search
+
+        <button
+          className="btn btn-outline-secondary text-body-tertiary"
+          type="submit"
+        >
+          <svg className="svg-param">
+            <use href={`${sprite}#icon-search`}></use>
+          </svg>
         </button>
       </form>
     </div>
