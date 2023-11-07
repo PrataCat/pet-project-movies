@@ -2,8 +2,3 @@ main {
   background-color: rgb(67, 4, 76);
   color: blanchedalmond;
 }
-
-.in-trend-wrap {
-  display: flex;
-  gap: 10px;
-}

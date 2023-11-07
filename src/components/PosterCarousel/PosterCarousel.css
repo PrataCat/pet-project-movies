@@ -1,8 +1,19 @@
-.carousel-wrap {
-  min-width: 270px;
-  background-color: purple;
+.carousel-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-  @media screen and (min-width: 1200px) {
-    min-width: 300px;
-  }
+.carousel-title {
+  margin: 0;
+  font-weight: 500;
+  color: rgb(61, 219, 255);
+  text-decoration: none;
+}
+
+.first-slide {
+  width: 100%;
+  background-color: purple;
+  overflow: hidden;
+  cursor: pointer;
 }
