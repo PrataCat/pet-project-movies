@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/57.92261d49.chunk.js","mappings":"oLAIA,EAJe,WACb,OAAOA,EAAAA,EAAAA,KAAA,MAAAC,SAAI,qBACb,C","sources":["pages/Series/Series.jsx"],"sourcesContent":["const Series = () => {\n  return <h1>This is TV Series</h1>;\n};\n\nexport default Series;\n"],"names":["_jsx","children"],"sourceRoot":""}

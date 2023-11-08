@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkpet_project_movies=self.webpackChunkpet_project_movies||[]).push([[273],{2273:function(e,n,t){t.r(n),t.d(n,{default:function(){return u}});var r=t(184),u=function(){return(0,r.jsx)("main",{children:(0,r.jsx)("h1",{children:"NotFound"})})}}}]);
-//# sourceMappingURL=273.7f5e3367.chunk.js.map

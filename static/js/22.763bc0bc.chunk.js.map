@@ -1,1 +1,0 @@
-{"version":3,"file":"static/js/22.763bc0bc.chunk.js","mappings":"sLAIA,EAJqB,WACnB,OAAOA,EAAAA,EAAAA,KAAA,MAAAC,SAAI,0BACb,C","sources":["pages/SerieDetails/SerieDetails.jsx"],"sourcesContent":["const SerieDetails = () => {\n  return <h1>This is a SerieDetails</h1>;\n};\n\nexport default SerieDetails;\n"],"names":["_jsx","children"],"sourceRoot":""}
