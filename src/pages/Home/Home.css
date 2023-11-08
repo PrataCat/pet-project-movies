@@ -1,4 +1,9 @@
 main {
-  background-color: rgb(67, 4, 76);
   color: blanchedalmond;
+}
+
+.home-title {
+  display: block;
+  margin: 15px auto;
+  text-align: center;
 }

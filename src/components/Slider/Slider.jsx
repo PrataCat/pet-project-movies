@@ -1,43 +1,25 @@
 import Swiper from 'swiper/bundle';
-import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import './Swiper.css';
 import './Slider.css';
 import { useEffect } from 'react';
-import SliderCard from '../SliderCard';
-import PosterCarousel from '../PosterCarousel';
+import SliderCard from '../SliderCard/SliderCard';
 
 const Slider = ({ movies }) => {
   useEffect(() => {
     var swiper = new Swiper('.swiper', {
-      effect: 'coverflow',
-      grabCursor: true,
-      slidesPerView: 4,
-      // slidesPerGroup: 2,
+      slidesPerView: 5,
       spaceBetween: 15,
-      centeredSlides: false,
-      oneWayMovement: false,
-      coverflowEffect: {
-        rotate: 0,
-        stretch: 0,
-        depth: 0,
-        modifier: 1,
-        slideShadows: false,
-      },
-
-      loop: true,
-      loopAddBlankSlides: false,
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-
       navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
       },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
+      scrollbar: {
+        el: '.swiper-scrollbar',
+        dragSize: 50,
+        draggable: true,
+        dragColor: 'aqua',
       },
       keyboard: {
         enabled: true,
@@ -48,30 +30,30 @@ const Slider = ({ movies }) => {
       },
     });
     swiper.slideNext();
-  }, []);
+  }, [movies.length]);
   return (
-    <section className="in-trend-wrap">
-      <div className="swiper-container">
-        <div className="swiper">
-          <div className="swiper-wrapper">
-            <PosterCarousel movies={movies} />
-            {movies.map(movie => {
-              const { id, poster_path, title, release_date } = movie;
-              return (
-                <SliderCard
-                  id={id}
-                  key={id}
-                  poster={poster_path}
-                  title={title}
-                  release={release_date}
-                />
-              );
-            })}
-          </div>
+    <>
+      <h2 className="swiper-title">Movies</h2>
+      <div className="swiper">
+        <div className="swiper-wrapper">
+          {movies.map(movie => {
+            const { id, poster_path, title, release_date } = movie;
+            return (
+              <SliderCard
+                id={id}
+                key={id}
+                poster={poster_path}
+                title={title}
+                release={release_date}
+              />
+            );
+          })}
         </div>
-        <div className="swiper-pagination"></div>
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
+        <div className="swiper-scrollbar"></div>
       </div>
-    </section>
+    </>
   );
 };
 

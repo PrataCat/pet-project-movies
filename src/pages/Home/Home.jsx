@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 import getTrendingAll from '../../servises/api/getTrendingAll';
 import Loader from '../../components/Loader';
+import Slider from '../../components/Slider/Slider';
 import './Home.css';
-import Slider from '../../components/Slider';
 
 const Home = () => {
   const [topMovies, setTopMovies] = useState([]);
@@ -34,7 +34,7 @@ const Home = () => {
   return (
     <main>
       {isLoading && <Loader />}
-      <h2>In trend</h2>
+      <h2 className="home-title">In trend</h2>
       <Slider movies={topMovies} />
       {errorMassege && <h2>{errorMassege}</h2>}
     </main>

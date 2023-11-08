@@ -1,5 +1,5 @@
-import '../../index.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import '../../index.css';
 import './App.css';
 import { lazy } from 'react';
 import { Routes, Route } from 'react-router-dom';
