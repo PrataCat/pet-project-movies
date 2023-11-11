@@ -6,10 +6,11 @@ import './Slider.css';
 import { useEffect } from 'react';
 import SliderCard from '../SliderCard/SliderCard';
 
-const Slider = ({ movies }) => {
+const Slider = ({ movies, page_title }) => {
   useEffect(() => {
     var swiper = new Swiper('.swiper', {
       slidesPerView: 5,
+      slidesPerGroup: 2,
       spaceBetween: 15,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -26,25 +27,25 @@ const Slider = ({ movies }) => {
         pageUpDown: true,
       },
       mousewheel: {
-        thresholdDelta: 10,
+        thresholdDelta: 70,
       },
     });
-    swiper.slideNext();
-  }, [movies.length]);
+    swiper.slidePrev();
+  });
+
   return (
     <>
-      <h2 className="swiper-title">Movies</h2>
+      <h2 className="swiper-title">{page_title}</h2>
       <div className="swiper">
         <div className="swiper-wrapper">
           {movies.map(movie => {
-            const { id, poster_path, title, release_date } = movie;
+            const { id, poster_path, title, name } = movie;
             return (
               <SliderCard
                 id={id}
                 key={id}
                 poster={poster_path}
-                title={title}
-                release={release_date}
+                title={title ? title : name}
               />
             );
           })}

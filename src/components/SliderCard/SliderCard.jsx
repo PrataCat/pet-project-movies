@@ -1,4 +1,4 @@
-const SliderCard = ({ id, poster, title, release }) => {
+const SliderCard = ({ id, poster, title }) => {
   return (
     <div key={id} id={id} className="swiper-slide swiper-card-wrap">
       <img

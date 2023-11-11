@@ -4,6 +4,12 @@ import Loader from '../../components/Loader';
 import Slider from '../../components/Slider/Slider';
 import './Home.css';
 
+const category = {
+  1: 'movie',
+  2: 'tv',
+  3: 'person',
+};
+
 const Home = () => {
   const [topMovies, setTopMovies] = useState([]);
   const [errorMassege, setErrorMassege] = useState();
@@ -14,10 +20,10 @@ const Home = () => {
 
     (async () => {
       try {
-        const data = await getTrendingAll();
+        const data = await getTrendingAll(category[1]);
 
         if (!data.length) {
-          setErrorMassege('There are no movies or series for now.');
+          setErrorMassege('There are no movies for now.');
           setIsLoading(false);
           return;
         }
@@ -35,7 +41,7 @@ const Home = () => {
     <main>
       {isLoading && <Loader />}
       <h2 className="home-title">In trend</h2>
-      <Slider movies={topMovies} />
+      <Slider movies={topMovies} page_title={'Movies'} />
       {errorMassege && <h2>{errorMassege}</h2>}
     </main>
   );

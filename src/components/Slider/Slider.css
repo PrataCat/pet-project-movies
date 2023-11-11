@@ -1,15 +1,13 @@
+.swiper {
+  margin-bottom: 25px;
+}
+
 .swiper-title {
   margin: 0 auto 8px 15px;
   font-weight: 500;
   color: rgb(61, 219, 255);
   text-decoration: none;
 }
-
-/* .swiper-wrapper {
-  display: flex;
-  min-height: 100%;
-  align-items: stretch;
-} */
 
 .swiper-card-wrap {
   display: flex;
@@ -19,9 +17,7 @@
   min-height: 100%;
   padding-bottom: 8px;
   min-width: 0;
-  /* border: 1px solid #025ced; */
   border-radius: 12px;
-  box-shadow: -1px 5px 15px #0000001f;
   background-color: transparent;
 }
 
@@ -33,8 +29,6 @@
 }
 
 .swiper-card-wrap > .swiper-card-title {
-  /* display: block; */
-  flex-grow: 1;
   margin-bottom: 0;
   text-align: center;
   font-size: 1em;
@@ -44,20 +38,11 @@
   margin-block-end: 0em;
 }
 
-.swiper-scrollbar-drag {
-  background: rgba(0, 255, 255, 0.256);
-}
-
-.swiper-scrollbar-drag:hover,
-.swiper-scrollbar-drag:active {
-  background: rgba(0, 255, 255, 0.471);
-}
-
 .swiper-button-prev,
 .swiper-button-next {
   height: 100%;
   color: rgba(91, 219, 219, 0.427);
-  background-color: #3d5f811f;
+  background-color: transparent;
 }
 
 .swiper-button-prev:hover,
@@ -65,4 +50,14 @@
 .swiper-button-prev:active,
 .swiper-button-next:active {
   color: #025ced;
+}
+
+.swiper-scrollbar-drag {
+  background: rgba(0, 255, 255, 0.256);
+  cursor: pointer;
+}
+
+.swiper-scrollbar-drag:hover,
+.swiper-scrollbar-drag:active {
+  background: rgba(0, 255, 255, 0.471);
 }
