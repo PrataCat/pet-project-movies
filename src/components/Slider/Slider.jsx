@@ -6,15 +6,15 @@ import './Slider.css';
 import { useEffect } from 'react';
 import SliderCard from '../SliderCard/SliderCard';
 
-const Slider = ({ movies, page_title }) => {
+const Slider = ({ movies, page_title, selector }) => {
   useEffect(() => {
-    var swiper = new Swiper('.swiper', {
+    var swiper = new Swiper(`.${selector}`, {
       slidesPerView: 5,
       slidesPerGroup: 2,
       spaceBetween: 15,
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: `.${selector}-btn-next`,
+        prevEl: `.${selector}-btn-prev`,
       },
       scrollbar: {
         el: '.swiper-scrollbar',
@@ -36,7 +36,7 @@ const Slider = ({ movies, page_title }) => {
   return (
     <>
       <h2 className="swiper-title">{page_title}</h2>
-      <div className="swiper">
+      <div className={selector}>
         <div className="swiper-wrapper">
           {movies.map(movie => {
             const { id, poster_path, title, name } = movie;
@@ -50,8 +50,10 @@ const Slider = ({ movies, page_title }) => {
             );
           })}
         </div>
-        <div className="swiper-button-prev"></div>
-        <div className="swiper-button-next"></div>
+
+        <div className={`swiper-button-prev ${selector}-btn-prev`}></div>
+        <div className={`swiper-button-next ${selector}-btn-next`}></div>
+
         <div className="swiper-scrollbar"></div>
       </div>
     </>

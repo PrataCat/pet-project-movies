@@ -1,5 +1,8 @@
-.swiper {
-  margin-bottom: 25px;
+.swiper,
+.tvswiper {
+  position: relative;
+  margin-bottom: 50px;
+  overflow: hidden;
 }
 
 .swiper-title {
@@ -38,17 +41,25 @@
   margin-block-end: 0em;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
+.swiper-btn-next,
+.swiper-btn-prev,
+.tvswiper-btn-next,
+.tvswiper-btn-prev {
+  position: absolute;
+  top: 0;
   height: 100%;
   color: rgba(91, 219, 219, 0.427);
   background-color: transparent;
 }
 
-.swiper-button-prev:hover,
-.swiper-button-next:hover,
-.swiper-button-prev:active,
-.swiper-button-next:active {
+.swiper-btn-next:hover,
+.swiper-btn-prev:hover,
+.swiper-btn-next:active,
+.swiper-btn-prev:active,
+.tvswiper-btn-prev:hover,
+.tvswiper-btn-next:hover,
+.tvswiper-btn-prev:active,
+.tvswiper-btn-next:active {
   color: #025ced;
 }
 

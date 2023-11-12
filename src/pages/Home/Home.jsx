@@ -12,6 +12,7 @@ const category = {
 
 const Home = () => {
   const [topMovies, setTopMovies] = useState([]);
+  const [topTV, setTopTV] = useState([]);
   const [errorMassege, setErrorMassege] = useState();
   const [isLoading, setIsLoading] = useState(false);
 
@@ -37,11 +38,34 @@ const Home = () => {
     setIsLoading(false);
   }, []);
 
+  useEffect(() => {
+    setIsLoading(true);
+
+    (async () => {
+      try {
+        const data = await getTrendingAll(category[2]);
+
+        if (!data.length) {
+          setErrorMassege('There are no TV shows for now.');
+          setIsLoading(false);
+          return;
+        }
+
+        setTopTV(data);
+      } catch (error) {
+        setErrorMassege('TV shows loading error.');
+      }
+    })();
+
+    setIsLoading(false);
+  }, []);
+
   return (
     <main>
       {isLoading && <Loader />}
       <h2 className="home-title">In trend</h2>
-      <Slider movies={topMovies} page_title={'Movies'} />
+      <Slider movies={topMovies} page_title={'Movies'} selector={'swiper'} />
+      <Slider movies={topTV} page_title={'TV shows'} selector={'tvswiper'} />
       {errorMassege && <h2>{errorMassege}</h2>}
     </main>
   );
