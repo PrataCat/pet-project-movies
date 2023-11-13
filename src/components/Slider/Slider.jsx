@@ -9,7 +9,7 @@ import SliderCard from '../SliderCard/SliderCard';
 const Slider = ({ movies, page_title, selector }) => {
   useEffect(() => {
     var swiper = new Swiper(`.${selector}`, {
-      slidesPerView: 5,
+      slidesPerView: 8,
       slidesPerGroup: 2,
       spaceBetween: 15,
       navigation: {

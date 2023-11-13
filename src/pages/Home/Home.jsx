@@ -3,6 +3,7 @@ import getTrendingAll from '../../servises/api/getTrendingAll';
 import Loader from '../../components/Loader';
 import Slider from '../../components/Slider/Slider';
 import './Home.css';
+import Hero from '../../components/Hero';
 
 const category = {
   1: 'movie',
@@ -63,9 +64,17 @@ const Home = () => {
   return (
     <main>
       {isLoading && <Loader />}
-      <h2 className="home-title">In trend</h2>
-      <Slider movies={topMovies} page_title={'Movies'} selector={'swiper'} />
-      <Slider movies={topTV} page_title={'TV shows'} selector={'tvswiper'} />
+      <Hero />
+      <Slider
+        movies={topMovies}
+        page_title={'Movies in trend'}
+        selector={'swiper'}
+      />
+      <Slider
+        movies={topTV}
+        page_title={'TV Series in trend'}
+        selector={'tvswiper'}
+      />
       {errorMassege && <h2>{errorMassege}</h2>}
     </main>
   );
