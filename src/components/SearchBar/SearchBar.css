@@ -1,10 +1,21 @@
 .searchbar-container {
+  display: flex;
+  width: 220px;
+  height: 30px;
+
   @media screen and (min-width: 768px) {
     margin-right: 50px;
+    width: 270px;
+    height: 34px;
+  }
+
+  @media (min-width: 992px) {
+    height: 38px;
   }
 }
 
 .form-control {
+  height: 100%;
   background-color: #303030;
   border-radius: 24px;
   border-color: #5e5e5e;
@@ -21,10 +32,10 @@
 }
 
 .btn-outline-secondary {
-  border-radius: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 24px;
 }
 
 .btn-outline-secondary:hover {
@@ -34,7 +45,17 @@
 
 .svg-param {
   display: block;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   fill: currentColor;
+
+  @media screen and (min-width: 768px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  @media (min-width: 992px) {
+    width: 20px;
+    height: 20px;
+  }
 }
